@@ -1,6 +1,3 @@
-<script src="raphael-min.js"><
-<script src="flowchart-latest.js"></script>
-
 <h1 align="center">
 Descrierea automatelor secvențiale
 </h1>
