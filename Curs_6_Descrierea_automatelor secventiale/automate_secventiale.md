@@ -67,7 +67,7 @@ Moore sunt doar o funcție a vectorului de stare
 
 <br>
 <div align="center">
-<img src='current_state.png'>
+<img src='https://github.com/botondkirei/Suport_HDL/blob/5e4e843c6676a2782488cf9137143d2f8c888171/Curs_6_Descrierea_automatelor%20secventiale/figures/current_state.png'>
 </div>
 <br>
 
@@ -200,7 +200,7 @@ reprezentate de cât mai puține flipflops.
 
 <br>
 <div align="center">
-<img src='b.png'>
+<img src='https://github.com/botondkirei/Suport_HDL/blob/5e4e843c6676a2782488cf9137143d2f8c888171/Curs_6_Descrierea_automatelor%20secventiale/figures/b.png'>
 <p style="color:#87CEEB"> Deosebirea dintre(a) automatele de stare de moore și (b) automatele de stare Mealy</p>
 </div>
 <br>
@@ -229,7 +229,7 @@ adică ieșirea depinde doar de starea sistemului.
 
 <br>
 <div align="center">
-<img src='design.png'>
+<img src='https://github.com/botondkirei/Suport_HDL/blob/5e4e843c6676a2782488cf9137143d2f8c888171/Curs_6_Descrierea_automatelor%20secventiale/figures/design.png'>
 </div>
 <br>
 
@@ -243,7 +243,7 @@ adică ieșirea depinde doar de starea sistemului.
 
 <br>
 <div align="center">
-<img src='numai.png'>
+<img src='https://github.com/botondkirei/Suport_HDL/blob/5e4e843c6676a2782488cf9137143d2f8c888171/Curs_6_Descrierea_automatelor%20secventiale/figures/numai.png'>
 </div>
 <br
 
