@@ -78,7 +78,7 @@ timpul progresează, FSM trece de la o stare la alta. Noua stare este
 determinată de funcția de stare următoare, care este o funcție a stării actuale
 și a semnalelor de intrare.
 
-Există mai multe avantaje în utilizarea stilului unic la cald pentru a
+### Există mai multe avantaje în utilizarea stilului unic la cald pentru a
 proiecta o mașină de stare:
 
 - mașinile cu o stare caldă sunt mai rapide. Viteza depinde de numărul de
