@@ -16,7 +16,7 @@ package list_pkg is generic (type mytype;
 	
 	type LIST is protected
 	
-	    procedure push( variable value : in mytype);
+	    procedure push( variable var : in mytype);
         procedure pushc( constant const : in mytype);
         
 	    impure function pop return mytype;
@@ -33,16 +33,16 @@ package body list_pkg is
 
 	    variable mylist : LINK ;
 
-        procedure push( variable value : in mytype) is
+        procedure push( variable var : in mytype) is
             variable Ptr : LINK;
         begin 
             if mylist = NULL then
                 mylist := new ITEM;
-                mylist.value := value;
+                mylist.value := var;
                 mylist.succ := NULL;
             else
                 Ptr :=  new ITEM;
-                Ptr.value := value;
+                Ptr.value := var;
                 Ptr.succ := mylist;
                 mylist := Ptr;
             end if;

@@ -19,7 +19,19 @@ architecture test of test_list is
 		package integer_list is new work.list_pkg generic map (mytype => integer, print_item => print_item) ;
 		use integer_list.all;
 		
-		shared variable my_list : integer_list.LIST;
+		procedure print_item (variable l : inout integer_list.List) is
+		begin
+		end procedure;
+		
+		type my_list is integer_list.LIST;
+		
+		--shared variable my_list : integer_list.LIST;
+		
+		package list_of_list is new work.list_pkg generic map (mytype => integer_list.LIST, print_item => print_item) ;
+		use list_of_list.all;
+		
+		shared variable my_list_of_list : list_of_list.LIST;
+
 		
 begin
 
