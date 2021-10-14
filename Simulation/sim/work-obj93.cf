@@ -1,0 +1,18 @@
+v 4
+file . ".\test_inv.vhd" "76d3f426bc17bf2691c039212d8fc65324b80756" "20211014135547.113":
+  entity test_inv at 1( 0) + 0 on 67;
+  architecture test of test_inv at 9( 120) + 0 on 68;
+file . ".\inv.vhd" "97e498f742ea2a468e914ee57ca7915344c2d076" "20211014135547.112":
+  entity inv at 1( 0) + 0 on 65;
+  architecture behav of inv at 12( 204) + 0 on 66;
+file . ".\PAECore.vhd" "4f3b29b63f8bda6031c452396fea917c187aac76" "20211014135547.109":
+  package paecore at 24( 1505) + 0 on 55 body;
+  package body paecore at 207( 26470) + 0 on 56;
+  entity activity_monitor at 225( 27138) + 0 on 57;
+  architecture behavioral of activity_monitor at 233( 27318) + 0 on 58;
+  entity paestimator at 250( 28004) + 0 on 59;
+  architecture monitoring of paestimator at 270( 28638) + 0 on 60;
+  entity power_estimator at 309( 30363) + 0 on 61;
+  architecture periodic of power_estimator at 333( 31213) + 0 on 62;
+  entity sum_up at 364( 32358) + 0 on 63;
+  architecture behavioral of sum_up at 377( 32667) + 0 on 64;
