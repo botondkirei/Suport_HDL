@@ -20,7 +20,7 @@ In continuare sa presupunem ca se foloseste o tehnologie tinta a carui celula st
 
 *Fig. 2: Reprezentarea unei biblioteci de celule standard*
 
-<img src="circuit_exemplu.svg" alt="circuit exemplu" width=25%/> <img src="exemplu_acoperire.svg" alt="exemplu acoperire" width=25%/>
+<img src="Exemplu_cicuit.svg" alt="circuit exemplu" width=25%/> <img src="exemplu_acoperire.svg" alt="exemplu acoperire" width=25%/>
 
 *Fig. 3: Exemplu*
 
