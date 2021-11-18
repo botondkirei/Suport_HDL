@@ -16,7 +16,7 @@ Orice functie booleana se poate implementa folosind doar porti inverosare si por
 
 In continuare sa presupunem ca se foloseste o tehnologie tinta a carui celula standard contin nu numar de port logice cu diferite functii: INV, NAND2, AND2, OR2, AOI21 si AOI22. Reprezentarea echivalenta a portilor este dat in figura 2.  
 
-<img src="reprezentarea_unei_biblioteci_de_celule_standard.svg" alt="reprezentarea_unei_biblioteci_de_celule_standard" width=25%/>
+<img src="reprezentarea_unei_biblioteci_de_celule_standard.svg" alt="reprezentarea_unei_biblioteci_de_celule_standard" width=75%/>
 
 *Fig. 2: Reprezentarea unei biblioteci de celule standard*
 
