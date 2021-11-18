@@ -10,7 +10,7 @@ O solutie posibila pentru maparea tehnologica este oferit de un procedeu denumit
 ### Reprezentarea DAG (directed-acyclyc-graph)
 Orice functie booleana se poate implementa folosind doar porti inverosare si porti NAND. Astfel retelele logice boolene sunt convertite in retele de INV si NAND. Pentru o reprezentare a retelelor booleene si mai simple se foloseste urmatoarea reprezentare. O operatie de negare este notat cu o bulinuta neagra, o operate de NAND este inlocuit cu o bulinuta alba, iar un port de intrare este reprezentat de un patratel. 
 
-<img src="reprezentarea.svg" alt="reprezentarea AIG" width="200"/>
+<img src="reprezentarea.svg" alt="reprezentarea AIG" width="200">
 
 *Fig. 1: reprezentarea operatiilor intr-o arbore*
 
@@ -20,7 +20,7 @@ In continuare sa presupunem ca se foloseste o tehnologie tinta a carui celula st
 
 *Fig. 2: Reprezentarea unei biblioteci de celule standard*
 
-<img src="exemplu_acoperire.svg" alt="exemplu acoperire" width=25%/>
+<img src="circuit_exemplu.svg" alt="circuit exemplu" width=25%/> <img src="exemplu_acoperire.svg" alt="exemplu acoperire" width=25%/>
 
 *Fig. 3: Exemplu*
 
