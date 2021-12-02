@@ -12,5 +12,9 @@ Prin urmare, pentru a obține soluții bune în timpul rulării polinomiale, pro
        Plasarea globală înseamnă a răspândi modulele aproximativ pe cip, rezultând o plasare cu câteva suprapuneri. În deceniile anterioare, au fost dezvoltați algoritmi pentru plasarea globală. Ele diferă în principal în modul în care este minimizată lungimea firului și în ce mod sunt răspândite porțile pe cip. Figura de mai jos clasifică diferite tehnici și prezintă sisteme de plasare de ultimă generație. 
 <img src="Tehnici_de_plasare.png" alt="Tehnici_de_plasare "/>
        
-### sub-sub titlu
+## Tipuri de plasare
+
+### Plasarea "Greedy" (metoda lacomă)
+
+Plasarea bazat pe metode greedy sunt o metode iterative, pornind de la o suluție inițială acesta este modificat și se vor accepta plasări noi cu cost mai redus. Aici, plasarea de început poate fi aleatorie, iar costul plasării este o combinație a lungimilor de fire de interconexiune și suprapunere a modulelor. Datorită faptului că sunt acceptate doar soluții de plasare mai bune, este probabil ca plasarea greedy se blochează într-un minim local, adică probabil nu va găsi soluția optimă. PLasarea gready modifică amplasarea prin permutarea modulelor, fie a doar două sau mai multor module. Pentru circuite cu câteva module, toate posibilele pot fi testate. Pentru circuite mai mari, doar module vecine pot fi permutate în timpul de rulare finit. Prin urmare, euristica mutărilor a fost dezvoltată pentru a decide care module sunt cele mai bune pentru a permite o plasare mai bună. Principalul dezavantaj al plasării greedy este că nu fac decât o optimizare locală a plasării. Astfel, ei depind foarte mult la plasarea de început.
 
