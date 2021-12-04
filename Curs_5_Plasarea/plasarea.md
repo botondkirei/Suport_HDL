@@ -43,14 +43,31 @@ Plasarea liniară folosește o funcție de cost liniară și elimină suprapuner
 
 Plasarea pătratică urmărește minimizarea lungimii totale a firului, unde lungemea firelor este exprimat de diferența pătratică a coordonatelor. Funcția de cost pătratică Γ este:
 ```math
-Γ = 1/2*sum(w_ij * (x_i-x_j)^2 + w_ij * (y_i-y_j)^2)
+Γ = 1/2*sum(w_ij * (x_i-x_j)^2 + w_ij * (y_i-y_j)^2) (1)
 ```
 unde perechea p_i=(x_i, y_i) reprezintă poziția modulului i, iar Wij este o pondere a laturii care conecteaz modulele i si j. 
 Considerând vectorul  p = (x1, x2, ..., xN, y1, y2, ... yN)T fiind pozițiile tuturor N modulele, notarea sumei funcției de costuri quadratice (2.1) poate fi reprezentat cu operați matriciale.
 ```math
-Γ = 1/2*pT*C*p + pT*d + const
+Γ = 1/2*pT*C*p + pT*d + const (2)
 ```
 Matricea C reprezintă conexiunile dintre modulele, iar vectorul d reflectă conexiunile dintre modulele și puncte fixe. Puncte fixe sunt de exemplu pini I/O (pini de intrare/ieșire). Prin minimizarea lui Γ, plasarea cvadratică rezultă pozițiile modulelor p astfel încît lungimea fierlor este minimizată, aceasta fiind o plasarea optimă. Deoarece plasarea pătratică nu ia in considerare dimensiunea modulelor, plasarea are nevoie de o metodă pentru a evita suprapunerea modulelor. În funcție de motoda de reducerea suprapunerilor, plasarea pătratică este împărțită în trei categorii: pe baza valorilor proprii, pe baza de partiționare și pe baza forțelor.
+
+#### Plasarea pătratică bazată pe valorile proprii
+
+Plasarea pătratică bazată pe valorile proprii presupun că toate modulele sunt mobile, adică d = 0 in (2). Pentru a reduce suprapunerea modulului și pentru a răspândi modulele pe zona de plasare, amplasarea folosește constrângerea pTp = const. Combinarea acestei constrângeri cu funcția de cost Γ rezultă o nouă funcție, al cărei minim este găsit egalând derivatul (în raport cu xi și yi) cu zero. Rezultă Cp - λp = 0, care este similar cu determinarea valorilor și vectorilor proprii ale matricii C. Apoi, pozițiile modulului sunt date de către vectorii proprii cu cele mai mici valori proprii. 
+
+#### Plasarea patratică bazată pe partiționare
+
+Pentru a reduce suprapunerea modulului, plasarea pătratică bazată pe partiționare împarte recursiv circuitul și aria de plasare, și aloca module din circuit zonelor din aria de plasare. Spre deosebire de plasarea cu decupare minimă, care folosește o tehnică similară pentru plasare, plasarea pătratică minimizeză funcția de cost pătratic în fiecare etapă a procesului recursiv. La plasarea patratică bazată pe partiționare, diferite tehnici sunt utilizate pentru a partiționa aria de plasare, pentru a partiționa circuitul și pentru a reține modulele în zonele care li s-a atribuit.
+
+#### Plasarea pătratică direcționat prin forță
+
+Conexiunile între două module pot fi văzute ca arcuri elastice. În această analogie, circuitul poate fi privit ca un sistem de arcuri și funcția cost Γ reprezintă energia totală a sistemului. Derivata lui Γ este „forța firelor”, creată de arcuri: Fnet = Cp + d. Egalarea acestor forțe cu 0 zero, rezultă în pozițiile modulelor, ceea ce este egal cu starea de echilibru a sistemului de arcuri. Se utilizeaza o forță suplimentară Fadd pentru a răspândi modulele pe aria de plasare. Aceasta răspândire se face într-o succesiune de iterații de plasare. Egalarea sumei forței firelor și a forței suplimentare cu zero are ca rezultat un sistem de ecuații liniare. Acest sistem poate fi rezolvat în mod eficient în raport cu poziția modulelor p. 
+   
+### Plasarea neliniară
+
+Plasarea neliniară se bazează pe o funcție de cost neliniar.Majorul dezavantaj al plasatorilor neliniare este că optimizarea numerică neliniară durează în timp. Plasatoarele neliniare diferă în principal în modul în care se elimină suprapunerea modulului.
+
 
 # Bibliografie
 Peter Spindler, „Efficient Quadratic Placement of VLSI Circuits”, Thesis. Technischen Universit¨at M¨unchen zur Erlangung, 2007
