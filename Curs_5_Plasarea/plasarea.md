@@ -74,6 +74,7 @@ Plasarea prin deformare prin deformare pornesc cu o plasare inițială (obșinut
 
 ## Plasarea finală
 Plasarea globală fac o răspândire pe cip aproximativă a modulelor, în timp ce se ia în considerare diferite obiective, cum ar fi lungimea totală a firelor și rutabilitatea. După plasarea globală, se face plasarea finală. Plasarea finală constă în din două etape consecutive: legalizarea și plasarea detaliată. În legalizare, suprapunerile rămase în urma plasării globale sunt eliminate, iar modulele sunt aliniate la o structură de rând sau grilă. În plasarea detaliată, plasarea legală este îmbunătățită astfel încât lungimea totală a firelor să fie redusă sau  alte obiective, precum proiectarea pentru fabricație sau pentru randament, să fie satisfăcute. Abordarea obișnuită în plasarea detaliată este de a utiliza ferestre glisante mici pentru a capta un număr redus de module (aproximativ 10 module) și să efectueze transformări diferite pe acest set de module. De exemplu, cîteva modulele sunt rotite, o pereche de module sunt intre-schimbate sau chiar un numar mare de modulele sunt permutate.
+<img src="plasare_globala_si_plasare_legitima.png" alt="plasare_globala_si_plasare_legitima "/>
 
 # Bibliografie
 Peter Spindler, „Efficient Quadratic Placement of VLSI Circuits”, Thesis. Technischen Universit¨at M¨unchen zur Erlangung, 2007
