@@ -39,13 +39,18 @@ PLasarea analitică se bazează pe o funcție de cost analitică, care este cont
 
 Plasarea liniară folosește o funcție de cost liniară și elimină suprapunerea modulelor prin constrângeri liniare dintre module. Aceasta rezultă într-o problema de programare liniară. Astfel de programe au o complexitate de calcul ridicată. Prin urmare, aplicațiile de plasare liniare precum [ B. X. Weis, D. A. Mlynski: A new relative placement procedure based on MSST and linear programming, in: IEEE International Symposium on Circuits and Systems (ISCAS), pages 564–567, 1987. ] [ S. Reda, A. Chowdhary: Effective linear programming based placement methods, in: ACM/SIGDA International Symposium on Physical Design (ISPD) pages 186–191, 2006] pot fi utilizate numai pentru circuite cu un număr redus de module. Funcția de cost analitică în plasarea liniară poate fi nediferențială (de exemplu, folosind funcția de valoare absolută). În toate celelalte abordări de plasare analitică, funcția de cost este diferențiabilă.
 
-#### Plasarea cvadratică
+#### Plasarea pătratică
 
-Plasarea cvadratică urmărește minimizarea lungimii totale a firului, unde lungemea firelor este exprimat de diferența pătratică a coordonatelor. Funcția de cost pătratică Γ este:
+Plasarea pătratică urmărește minimizarea lungimii totale a firului, unde lungemea firelor este exprimat de diferența pătratică a coordonatelor. Funcția de cost pătratică Γ este:
 ```math
-a^2+b^2=c^2
+Γ = 1/2*sum(w_ij * (x_i-x_j)^2 + w_ij * (y_i-y_j)^2)
 ```
-
+unde perechea p_i=(x_i, y_i) reprezintă poziția modulului i, iar Wij este o pondere a laturii care conecteaz modulele i si j. 
+Considerând vectorul  p = (x1, x2, ..., xN, y1, y2, ... yN)T fiind pozițiile tuturor N modulele, notarea sumei funcției de costuri quadratice (2.1) poate fi reprezentat cu operați matriciale.
+```math
+Γ = 1/2*pT*C*p + pT*d + const
+```
+Matricea C reprezintă conexiunile dintre modulele, iar vectorul d reflectă conexiunile dintre modulele și puncte fixe. Puncte fixe sunt de exemplu pini I/O (pini de intrare/ieșire). Prin minimizarea lui Γ, plasarea cvadratică rezultă pozițiile modulelor p astfel încît lungimea fierlor este minimizată, aceasta fiind o plasarea optimă. Deoarece plasarea pătratică nu ia in considerare dimensiunea modulelor, plasarea are nevoie de o metodă pentru a evita suprapunerea modulelor. În funcție de motoda de reducerea suprapunerilor, plasarea pătratică este împărțită în trei categorii: pe baza valorilor proprii, pe baza de partiționare și pe baza forțelor.
 
 # Bibliografie
 Peter Spindler, „Efficient Quadratic Placement of VLSI Circuits”, Thesis. Technischen Universit¨at M¨unchen zur Erlangung, 2007
