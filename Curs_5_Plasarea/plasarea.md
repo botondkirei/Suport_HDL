@@ -12,7 +12,7 @@ Prin urmare, pentru a obține soluții bune în timpul rulării polinomiale, pro
        Plasarea globală înseamnă a răspândi modulele aproximativ pe cip, rezultând o plasare cu câteva suprapuneri. În deceniile anterioare, au fost dezvoltați algoritmi pentru plasarea globală. Ele diferă în principal în modul în care este minimizată lungimea firului și în ce mod sunt răspândite porțile pe cip. Figura de mai jos clasifică diferite tehnici și prezintă sisteme de plasare de ultimă generație. 
 <img src="Tehnici_de_plasare.png" alt="Tehnici_de_plasare "/>
        
-## Tipuri de plasare
+## Tipuri de plasare glovale
 
 ### Plasarea "Greedy" (metoda lacomă)
 
@@ -64,10 +64,16 @@ Pentru a reduce suprapunerea modulului, plasarea pătratică bazată pe partiți
 
 Conexiunile între două module pot fi văzute ca arcuri elastice. În această analogie, circuitul poate fi privit ca un sistem de arcuri și funcția cost Γ reprezintă energia totală a sistemului. Derivata lui Γ este „forța firelor”, creată de arcuri: Fnet = Cp + d. Egalarea acestor forțe cu 0 zero, rezultă în pozițiile modulelor, ceea ce este egal cu starea de echilibru a sistemului de arcuri. Se utilizeaza o forță suplimentară Fadd pentru a răspândi modulele pe aria de plasare. Aceasta răspândire se face într-o succesiune de iterații de plasare. Egalarea sumei forței firelor și a forței suplimentare cu zero are ca rezultat un sistem de ecuații liniare. Acest sistem poate fi rezolvat în mod eficient în raport cu poziția modulelor p. 
    
-### Plasarea neliniară
+#### Plasarea neliniară
 
 Plasarea neliniară se bazează pe o funcție de cost neliniar.Majorul dezavantaj al plasatorilor neliniare este că optimizarea numerică neliniară durează în timp. Plasatoarele neliniare diferă în principal în modul în care se elimină suprapunerea modulului.
 
+### Plasarea prin deformare (warping placement)
+
+Plasarea prin deformare prin deformare pornesc cu o plasare inițială (obșinut prin plasare pătratică) și folosesc abordări ale geometriei computaționale pentru a deforma aria de plasare și, astfel, mută modulele indirect. Deformarea arie de plasare este condusă de minimizareaa lungimii firelor și a suprapunerii modulului. Plasarea prin deformare sunt: [ Z. Xiu, J. D. Ma, S. M. Fowler, R. A. Rutenbar: Large-scale placement by gridwarping, in: ACM/IEEE Design Automation Conference (DAC), pages 351–356, 2004., Z. Xiu, R. Rutenbar: Mixed-size placement with fixed macrocells using gridwarping, in: ACM/SIGDA International Symposium on Physical Design (ISPD), pages 103–109, 2007.].
+
+## Plasarea finală
+Plasarea globală fac o răspândire pe cip aproximativă a modulelor, în timp ce se ia în considerare diferite obiective, cum ar fi lungimea totală a firelor și rutabilitatea. După plasarea globală, se face plasarea finală. Plasarea finală constă în din două etape consecutive: legalizarea și plasarea detaliată. În legalizare, suprapunerile rămase în urma plasării globale sunt eliminate, iar modulele sunt aliniate la o structură de rând sau grilă. În plasarea detaliată, plasarea legală este îmbunătățită astfel încât lungimea totală a firelor să fie redusă sau  alte obiective, precum proiectarea pentru fabricație sau pentru randament, să fie satisfăcute. Abordarea obișnuită în plasarea detaliată este de a utiliza ferestre glisante mici pentru a capta un număr redus de module (aproximativ 10 module) și să efectueze transformări diferite pe acest set de module. De exemplu, cîteva modulele sunt rotite, o pereche de module sunt intre-schimbate sau chiar un numar mare de modulele sunt permutate.
 
 # Bibliografie
 Peter Spindler, „Efficient Quadratic Placement of VLSI Circuits”, Thesis. Technischen Universit¨at M¨unchen zur Erlangung, 2007
