@@ -9,8 +9,8 @@ O bibliotecă de celule standard cu sursă deschisă se găsește [aici](http://
 Bibliotecile cu celule standard a diferitelor tehnologii de fabricație sunt adese ori confidențiale, astfel nu sunt publice. Se găsesc câteva biblioteci de celulă standard realizat de universități care pun la dispoziție biblioteicele. De exemplu, o bibliotecă standard pentru fabrica TSMC în tehnologia 0,25um CMOS se găsește [aici](https://vlsiarch.ecen.okstate.edu/flows/).
 ## Solutie
 O solutie posibila pentru maparea tehnologica este oferit de un procedeu denumit acoperirea arborelor (tree covering). Un prim pas este conversia retelei logice intr-o arbore, iar aceasta arbore este acoperit de arbori mai mici, corespunzatori unor porti incluse intr-o librarie standard.
-### Reprezentarea DAG (directed-acyclyc-graph)
-Orice functie booleana se poate implementa folosind doar porti inverosare si porti NAND. Astfel retelele logice boolene sunt convertite in retele de INV si NAND. Pentru o reprezentare a retelelor booleene si mai simple se foloseste urmatoarea reprezentare. O operatie de negare este notat cu o bulinuta neagra, o operate de NAND este inlocuit cu o bulinuta alba, iar un port de intrare este reprezentat de un patratel. 
+### Reprezentarea DAG (directed-acyclic-graph)
+Orice functie booleana se poate implementa folosind doar porti inverosare si porti SI-NU uc două intrări. Astfel retelele logice boolene sunt convertite in retele de INV si NAND. Pentru o reprezentare a retelelor booleene si mai simple se foloseste urmatoarea reprezentare. O operatie de negare este notat cu o bulinuta neagra, o operate de NAND este inlocuit cu o bulinuta alba, iar un port de intrare este reprezentat de un patratel. 
 
 <img src="reprezentarea.svg" alt="reprezentarea AIG" width="200">
 
